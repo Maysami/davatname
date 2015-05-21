@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="message_list_item_footer_background">#eeeeee</color>
+    <color name="openpgp_red">#CC0000</color>
+    <color name="openpgp_orange">#FF8800</color>
+    <color name="openpgp_green">#669900</color>
+    <color name="openpgp_blue">#336699</color>
+    <color name="messageListSelectedBackgroundColor">#8038B8E2</color>
+    <color name="messageListReadItemBackgroundColor">#c0cdcdcd</color>
+<!--     <color name="messageListUnreadItemBackgroundColor">#00ffffff</color> -->
+    <color name="messageListUnreadItemBackgroundColor">#00000000</color>
+
+    <!-- FARSHI -->
+    <color name="actionbarcolor">#00bcbe</color>
+    <color name="navigation_drawer_color">#f5f5f5</color>
+    <color name="divider_color">#9ad9e0</color>
+    <color name="elenoon_green">#059301</color>
+    <color name="elenoon_edittext_color">#a8e5e6</color>
+    <color name="welcome_round_color">#e0f4f5</color>
+    <color name="welcome_background_color">#fff5fa</color>
+    <color name="welcome_round_shadowcolor">#aaaaaa</color>
+    <color name="text_pressed">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="text_notpressed">#aaaaaa</color>
+    <color name="listitem_selected">#33b5e5</color>
+
+</resources>

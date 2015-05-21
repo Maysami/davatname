@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="saysys">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../EleNoonProject/plugins/SAYSYS/bin/saysys.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
