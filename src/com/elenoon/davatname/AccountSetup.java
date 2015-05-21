@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Message;
@@ -46,18 +47,31 @@ public class AccountSetup extends Activity  implements View.OnClickListener {
         setContentView(R.layout.account_setup);
 
         getActionBar().hide();
-
+        mEmailView = (EditText) findViewById(R.id.account_username);
+        mPasswordView = (EditText) findViewById(R.id.account_password);
+        mActivateButton= (Button) findViewById(R.id.activate);
         mSignButton = (Button) findViewById(R.id.signin);
+
+        findViewById(R.id.password_forgoten).setOnClickListener(this);
+
+        mEmailView.setOnClickListener(this);
+        mPasswordView.setOnClickListener(this);
+        mActivateButton.setOnClickListener(this);
+
+
+
+
         mSignButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
 
+              String  password = mPasswordView.getText().toString();
+              String  username = mEmailView.getText().toString();
+
                 com.google.gson.JsonObject json = new JsonObject();
-
-
                 Ion.with(AccountSetup.this)
-                        .load("http://id.elenoon.ir/cas/appLogin?username=meysami@elenoon.ir&password=reza")
+                        .load("http://id.elenoon.ir/cas/appLogin?username="+username+"&password="+password)
                         .asString()
                         .withResponse()
                         .setCallback(new FutureCallback<Response<String>>() {
@@ -96,6 +110,17 @@ public class AccountSetup extends Activity  implements View.OnClickListener {
         });
 
     }
+/*    private void activate() {
+
+        String smsNumber = "10003737";
+        String hotkey = getString(R.string.activate_account_hotkey);
+        String smsText = hotkey + " " + passowrdEt.getText().toString();
+
+        Uri uri = Uri.parse("smsto:" + smsNumber);
+        Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
+        intent.putExtra("sms_body", smsText);
+        startActivity(intent);
+    }*/
 
 
 
